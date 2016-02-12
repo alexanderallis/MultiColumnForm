@@ -1,6 +1,8 @@
 <html>
 <head>
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:600,400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="Assets/reset.css">
+  <link rel="stylesheet" type="text/css" href="Assets/index.css">
 </head>
 <body>
   <header>
@@ -8,17 +10,19 @@
   </header>
   <div class="container">
     <div class="column-one">
-    <form>
-      <h3>FIRST NAME:</h3>
-      <input type="text" name="firstname" value="John">
-      <h3>LAST NAME:</h3>
-      <input type="text" name="lastname">
+
+
+    <form id="frm1">
+      <h3>FIRST NAME</h3>
+      <input id ="firstname" type="text" name="firstname" placeholder="John" tabindex="1">
+      <h3>LAST NAME</h3>
+      <input id ="lastname" type="text" name="lastname" placeholder="Doe" tabindex="2">
       <h3>EMAIL ADDRESS</h3>
-      <input type="text" name="lastname">
+      <input id ="email"type="text" name="lastname" placeholder="JohnDoe@aol.com" tabindex="3">
     </form>
 
     <h3>COUNTRY</h3>
-   <select>
+   <select id ="country">
     <option value="volvo">Choose a Country</option>
     <option value="saab">France</option>
     <option value="opel">Italy</option>
@@ -27,62 +31,133 @@
 
     <form>
       <h3>BIOGRAPHY</h3>
-      <input class="biography"type="biography" name="firstname" value="">
+      <textarea id ="biography" class="large-box" type="biography" name="firstname" placeholder="I left Serbia to become a professional nail-clipper"></textarea>
     </form>
     </div>
 
     <div class="column-one">
     <form>
-      <h3>FIRST NAME:</h3>
-      <input type="text" name="firstname" value="John">
-      <h3>LAST NAME:</h3>
-      <input type="text" name="lastname">
-      <h3>EMAIL ADDRESS</h3>
-      <input type="text" name="lastname">
+      <h3>PHONE NUMBER</h3>
+      <input type="text" name="firstname" placeholder="111.111.1111">
+      <h3>AFFILIATIONS</h3>
+      <textarea class="large-box" type="text" placeholder="The Communist Party"></textarea>
     </form>
 
-    <h3>COUNTRY</h3>
-   <select>
-    <option value="volvo">Choose a Country</option>
-    <option value="saab">France</option>
-    <option value="opel">Italy</option>
-    <option value="audi">Portugal</option>
+    <h3>OCCUPATION</h3>
+   <select id ="occupation">
+    <option value="volvo">Choose an occupation</option>
+    <option value="saab">Web Designer</option>
+    <option value="opel">Web Developer</option>
+    <option value="audi">Hybrid</option>
   </select>
 
     <form>
-      <h3>BIOGRAPHY</h3>
-      <input class="biography"type="biography" name="firstname" value="">
+      <h3>CAT'S NAME</h3>
+      <input id="catName" type="catname" name="catname" placeholder="Heiruneman">
+      <h3>FAVORITE GADGET</h3>
+      <input id="gadget" type="favorite gadget" name="Favorite gadget" placeholder="My Nail Clippers">
+
     </form>
+
+
+
     </div>
 
     <div class="column-one">
-    <form>
-      <h3>FIRST NAME:</h3>
-      <input type="text" name="firstname" value="John">
-      <h3>LAST NAME:</h3>
-      <input type="text" name="lastname">
-      <h3>EMAIL ADDRESS</h3>
-      <input type="text" name="lastname">
-    </form>
-
-    <h3>COUNTRY</h3>
-   <select>
+    <h3>TYPE OF TALENT</h3>
+    <select id="talent">
     <option value="volvo">Choose a Country</option>
     <option value="saab">France</option>
     <option value="opel">Italy</option>
     <option value="audi">Portugal</option>
   </select>
+    <form>
+      <h3>FAVORITE DRINK</h3>
+      <input type="text" name="firstname" placeholder="San Pellegrino">
+      <h3>SPECIAL POWER</h3>
+      <input type="text" name="lastname" placeholder="scratching">
+      <h3>WEAPON OF CHOICE</h3>
+      <input type="text" name="lastname" placeholder="letter opener">
+    </form>
 
     <form>
-      <h3>BIOGRAPHY</h3>
-      <input class="biography"type="biography" name="firstname" value="">
+      <h3>COMMENTS</h3>
+      <textarea class="large-box"type="biography" name="firstname" placeholder="I just love fingers"></textarea>
     </form>
     </div>
 
     <div class="submit">
-    <h4 class="submit-text">SEND YOUR DATA</h4>
+    <button type="submit">SEND YOUR DATA</button>
     </div>
   </div>
+
+<script>
+
+var fName = document.querySelector("#firstname");
+var lName = document.querySelector("#lastname");
+var email = document.querySelector("#email");
+var country = document.querySelector("#country");
+var biography = document.querySelector("#biography");
+var occupation = document.querySelector("#occupation");
+
+var fName = document.querySelector("#firstname");
+var lName = document.querySelector("#lastname");
+var email = document.querySelector("#email");
+var country = document.querySelector("#country");
+var biography = document.querySelector("#biography");
+var occupation = document.querySelector("#occupation");
+
+var button = document.querySelector("button");
+button.addEventListener("click", function() {
+console.log(fName.value);
+fName.value = "";
+console.log(lName.value);
+lName.value = "";
+console.log(email.value);
+email.value = "";
+console.log(country.value);
+country.value = "";
+console.log(biography.value);
+biography.value = "";
+console.log(occupation.value);
+occupation.value = "";
+});
+
+
+</script>
+
+
+  <!-- <script>
+  function myFunction() {
+      var x = document.getElementById("frm1");
+      var text = "";
+      var i;
+      for (i = 0; i < x.length ;i++) {
+          text += x.elements[i].value + "<br>";
+      }
+      console.log(text);
+  }
+  </script> -->
+
+
+
+  <!-- <script>
+
+  function myFunction() {
+      var x = document.getElementById("frm1");
+      var text = "";
+      for (i = 0; i < x.length ;i++) {
+          text += x.elements[i].value;
+      }
+
+      var button = document.querySelector("button");
+      button.addEventListener("click", function() {
+      console.log(text);
+      })
+
+      };
+  </script> -->
+
 
 
 </body>
