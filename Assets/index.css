@@ -30,6 +30,7 @@ h1{
   border-color:white;
   border-width:3px;
   display:inline-block;
+  vertical-align:top;
   text-align:left;
   font-weight:400;
   font-size:1.2em;
@@ -50,11 +51,14 @@ form{  padding-right:9px;
 
 input{
   width:100%;
-  height:3em;
+  height:1.7em;
+  font-size:1.2em;
   background-color: #47A3DA;
   border-style:solid;
   border-color:white;
   border-width:3px;
+  padding-left:2px;
+  text-overflow:ellipsis;
 }
 
 select{
@@ -66,10 +70,23 @@ select{
   border-style:solid;
   border-color:slategrey;
   border-width:1px;
+  vertical-align:top;
 }
 
-.biography{
-  height:15em;
+textarea{
+  height:10em;
+  width:100%;
+  font-size:1.2em;
+  background-color: #47A3DA;
+  border-style:solid;
+  border-color:white;
+  border-width:3px;
+
+
+}
+
+::-webkit-input-placeholder{
+  color:#10689A;
 }
 
 .submit{
