@@ -93,10 +93,25 @@ textarea{
   border-style:none;
   border-color:white;
   border-width:1px;
-  text-align:center;
   padding-top:3em;
 }
 
+button{
+  border-style:none;
+  background-color: #10689A;
+  border-color:white;
+  border-width:1px;
+  text-align:center;
+  padding-top:1em;
+  padding-bottom:1em;
+  padding-left:2em;
+  padding-right:2em;
+  font-size: 1.1em;
+  color:white;
+}
+
+
+/*
 .submit h4{
   background-color:#10689A;
   width:250px;
@@ -106,4 +121,4 @@ textarea{
   font-size:1.2em;
   margin: 0 auto;
 
-}
+}*/

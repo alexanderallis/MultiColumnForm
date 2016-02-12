@@ -23,10 +23,10 @@
 
     <h3>COUNTRY</h3>
    <select id ="country">
-    <option value="volvo">Choose a Country</option>
-    <option value="saab">France</option>
-    <option value="opel">Italy</option>
-    <option value="audi">Portugal</option>
+    <option value="country">Choose a Country</option>
+    <option value="france">France</option>
+    <option value="italy">Italy</option>
+    <option value="portugal">Portugal</option>
   </select>
 
     <form>
@@ -38,17 +38,17 @@
     <div class="column-one">
     <form>
       <h3>PHONE NUMBER</h3>
-      <input type="text" name="firstname" placeholder="111.111.1111">
+      <input id="phoneNumber" type="text" name="firstname" placeholder="111.111.1111">
       <h3>AFFILIATIONS</h3>
-      <textarea class="large-box" type="text" placeholder="The Communist Party"></textarea>
+      <textarea id="affiliations" class="large-box" type="text" placeholder="The Communist Party"></textarea>
     </form>
 
     <h3>OCCUPATION</h3>
    <select id ="occupation">
-    <option value="volvo">Choose an occupation</option>
-    <option value="saab">Web Designer</option>
-    <option value="opel">Web Developer</option>
-    <option value="audi">Hybrid</option>
+    <option value="occupation">Choose an occupation</option>
+    <option value="web designer">Web Designer</option>
+    <option value="web developer">Web Developer</option>
+    <option value="hybrid">Hybrid</option>
   </select>
 
     <form>
@@ -65,24 +65,24 @@
 
     <div class="column-one">
     <h3>TYPE OF TALENT</h3>
-    <select id="talent">
-    <option value="volvo">Choose a Country</option>
-    <option value="saab">France</option>
-    <option value="opel">Italy</option>
-    <option value="audi">Portugal</option>
+  <select id="talent">
+    <option value="Talent">Choose a Talent</option>
+    <option value="Sleeping">Sleeping</option>
+    <option value="Eating">Eating</option>
+    <option value="Blinking">Blinking</option>
   </select>
     <form>
       <h3>FAVORITE DRINK</h3>
-      <input type="text" name="firstname" placeholder="San Pellegrino">
+      <input id="drink" type="text" name="firstname" placeholder="San Pellegrino">
       <h3>SPECIAL POWER</h3>
-      <input type="text" name="lastname" placeholder="scratching">
+      <input id="power" type="text" name="lastname" placeholder="scratching">
       <h3>WEAPON OF CHOICE</h3>
-      <input type="text" name="lastname" placeholder="letter opener">
+      <input id="weapon" type="text" name="lastname" placeholder="letter opener">
     </form>
 
     <form>
       <h3>COMMENTS</h3>
-      <textarea class="large-box"type="biography" name="firstname" placeholder="I just love fingers"></textarea>
+      <textarea id="comments" class="large-box"type="biography" name="firstname" placeholder="I just love fingers"></textarea>
     </form>
     </div>
 
@@ -98,14 +98,20 @@ var lName = document.querySelector("#lastname");
 var email = document.querySelector("#email");
 var country = document.querySelector("#country");
 var biography = document.querySelector("#biography");
-var occupation = document.querySelector("#occupation");
 
-var fName = document.querySelector("#firstname");
-var lName = document.querySelector("#lastname");
-var email = document.querySelector("#email");
-var country = document.querySelector("#country");
-var biography = document.querySelector("#biography");
+var phoneNumber = document.querySelector("#phoneNumber");
+var affiliations = document.querySelector("#affiliations");
 var occupation = document.querySelector("#occupation");
+var catName = document.querySelector("#catName");
+var gadget = document.querySelector("#gadget");
+
+var talent = document.querySelector("#talent");
+var drink = document.querySelector("#drink");
+var power = document.querySelector("#power");
+var weapon = document.querySelector("#weapon");
+var comments = document.querySelector("#comments");
+
+
 
 var button = document.querySelector("button");
 button.addEventListener("click", function() {
@@ -119,8 +125,28 @@ console.log(country.value);
 country.value = "";
 console.log(biography.value);
 biography.value = "";
+
+console.log(phoneNumber.value);
+phoneNumber.value = "";
+console.log(affiliations.value);
+affiliations.value = "";
 console.log(occupation.value);
 occupation.value = "";
+console.log(catName.value);
+catName.value = "";
+console.log(gadget.value);
+gadget.value = "";
+
+console.log(talent.value);
+talent.value = "";
+console.log(drink.value);
+drink.value = "";
+console.log(power.value);
+power.value = "";
+console.log(weapon.value);
+weapon.value = "";
+console.log(comments.value);
+comments.value = "";
 });
 
 
